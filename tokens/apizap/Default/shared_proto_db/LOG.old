@@ -1,0 +1,4 @@
+2024/07/15-03:15:12.794 5690 Creating DB N:\botwpp\tokens\apizap\Default\shared_proto_db since it was missing.
+2024/07/15-03:15:13.003 5690 Reusing MANIFEST N:\botwpp\tokens\apizap\Default\shared_proto_db/MANIFEST-000001
+2024/07/15-03:15:13.004 5690 Recovering log #3
+2024/07/15-03:15:13.004 5690 Reusing old log N:\botwpp\tokens\apizap\Default\shared_proto_db/000003.log 

@@ -1,0 +1,17 @@
+2024/07/15-03:16:45.829 5514 Creating DB N:\botwpp\tokens\apizap\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2024/07/15-03:16:45.895 5514 Reusing MANIFEST N:\botwpp\tokens\apizap\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/07/15-03:16:45.895 5514 Recovering log #132
+2024/07/15-03:16:46.188 5514 Reusing old log N:\botwpp\tokens\apizap\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000132.log 
+2024/07/15-03:16:46.189 5514 Delete type=2 #128
+2024/07/15-03:16:46.189 5514 Delete type=2 #129
+2024/07/15-03:16:46.189 5514 Delete type=2 #130
+2024/07/15-03:16:46.189 5514 Delete type=2 #131
+2024/07/15-03:16:46.189 5514 Delete type=2 #133
+2024/07/15-03:16:46.189 5514 Delete type=2 #134
+2024/07/15-03:16:46.190 5514 Delete type=2 #135
+2024/07/15-03:16:46.190 5514 Delete type=2 #136
+2024/07/15-03:16:46.190 5514 Delete type=2 #137
+2024/07/15-03:16:46.190 5514 Delete type=2 #138
+2024/07/15-03:16:46.503 3b18 Level-0 table #134: started
+2024/07/15-03:16:46.780 3b18 Level-0 table #134: 1327841 bytes OK
+2024/07/15-03:16:46.850 3b18 Delete type=0 #132

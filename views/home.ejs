@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+
+    <title>BMK-Connect - Api de conexão de whatsapp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #202020;
+            font-family: Calibri, sans-serif;
+        }
+        .btn-custom {
+            border-radius: 10px;
+            padding: 10px;
+            background-color: red;
+            color: #202020;
+            font-weight: 600;
+        }
+        a {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center my-5">
+        <div style="background-color: #202020;"><h3><a href='https://gameoverday.com/'>Cintia Faria - API WHATSAPP</a><br></h3></div>
+        <h1>WhatsApp API - BOT BMK</h1>
+        <h2>Iniciando API Aguarde ...</h2>
+        <p>Em caso de QRCode inválido, atualize essa página.</p>
+        <img id="img1" src="https://static.wixstatic.com/media/7243de_5052273fae724d13bd336b0a7c61dc98~mv2.gif" class="img-fluid mb-4">
+        <br><br>
+        <img src="https://static.wixstatic.com/media/7243de_ee182360a29943679330edd3785b5c83~mv2.png" class="img-fluid" style="width: 50px;">
+    </div>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        const socket = io('http://localhost:3000')
+        socket.on('connection')
+
+       
+       
+        socket.on('ready', (dataQR) => {
+            document.getElementById('img1').src = dataQR
+            document.querySelector('h2').innerHTML = "LEIA O QR-CODE";
+        })
+        socket.on('message', (dataStatus) => {
+          
+          // socket.emit('message')            
+           if (dataStatus === 'CONNECTED') { 
+               document.querySelector('h2').innerHTML = "CONECTADO";
+               document.querySelector('p').innerHTML = "Seu whatsApp irá interagir com o nosso, aguarde a configuração";
+               document.getElementById('img1').src = "https://static.wixstatic.com/media/7243de_cd0f30f5166641f9998892fa9415a400~mv2.png";
+               socket.disconnect(true);
+           }
+       })
+       
+        socket.emit('message')
+        socket.emit('ready')
+    </script>
+</body>
+</html>

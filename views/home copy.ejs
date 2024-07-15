@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+
+	<title>Whatsapp API - ZAP das Galáxias</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+        background-color: #ffffff;
+        color:#202020;
+        font-family: Calibri;
+        padding-left:100px;
+        }
+
+        .btn {
+            border-radius:10px;
+            padding:10px;
+            background-color: red;
+            color: #202020;
+            font-weight:600;
+        }
+
+        a { color: #ff0000}
+
+    </style>
+
+</head>
+<body>
+
+    <input type="text" class="message">
+    <button onclick="sendMessage()">Send Message</button>
+    <h1></h1>
+    <h2></h2>
+
+
+<script>
+    const socket = io('http://localhost:3001')
+    socket.on('connection')
+    socket.on('message', (data) => {
+        document.querySelector('h1').innerHTML = data
+    })
+    socket.emit('ready')
+    socket.on('ready', () => {
+        document.querySelector('h2').innerHTML = 'data'
+        socket.emit('ready', 'neandertal')
+    })
+    const sendMessage = () => {
+        const messageInput = document.querySelector('.message')
+        const message = messageInput.value
+        socket.emit('message', message)
+        socket.emit('ready', 'neandertal')
+    }
+</script>
+        
+</body>
+</html> 

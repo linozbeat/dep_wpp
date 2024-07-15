@@ -1,0 +1,5 @@
+2024/07/15-03:15:12.362 480c Creating DB N:\botwpp\tokens\apizap\Default\Local Storage\leveldb since it was missing.
+2024/07/15-03:15:12.732 480c Reusing MANIFEST N:\botwpp\tokens\apizap\Default\Local Storage\leveldb/MANIFEST-000001
+2024/07/15-03:15:12.733 480c Recovering log #4
+2024/07/15-03:15:12.791 480c Reusing old log N:\botwpp\tokens\apizap\Default\Local Storage\leveldb/000004.log 
+2024/07/15-03:15:12.792 480c Delete type=2 #5
